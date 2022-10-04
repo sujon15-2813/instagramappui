@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class UserPosts extends StatelessWidget {
   final String name;
-  UserPosts({required this.name});
+  const UserPosts({required this.name, super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -42,7 +42,7 @@ class UserPosts extends StatelessWidget {
         Container(
           height: 300,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(24),
             color: Colors.grey[300],
           ),
         ),
@@ -85,25 +85,24 @@ class UserPosts extends StatelessWidget {
           ),
         ),
         //caption
-        // Padding(
-        //   padding: const EdgeInsets.only(left: 16.0, top: 8),
-        //   child: RichText(
-        //     text: TextSpan(
-
-        //         style: TextStyle(
-        //           color: Colors.black,
-        //         ),
-        //         children: [
-        //           TextSpan(
-        //               text: 'sk',
-        //               style: TextStyle(fontWeight: FontWeight.bold)),
-        //           TextSpan(
-        //             text:
-        //                 'Maximum  boys and girls are addicted in social media ',
-        //           ),
-        //         ]),
-        //   ),
-        // ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16.0, top: 8),
+          child: RichText(
+            text: TextSpan(
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+                children: [
+                  TextSpan(
+                      text: '$name ',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(
+                    text:
+                        'Maximum  boys and girls are addicted in social media ',
+                  ),
+                ]),
+          ),
+        ),
         //comment
       ],
     );

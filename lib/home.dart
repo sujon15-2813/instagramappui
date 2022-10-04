@@ -20,7 +20,7 @@ class UserHome extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               'Instagram',
@@ -60,9 +60,12 @@ class UserHome extends StatelessWidget {
                   })),
           //POST
           Expanded(
-            child: ListView.builder(
+            child: ListView.separated(
                 scrollDirection: Axis.vertical,
                 itemCount: people.length,
+                separatorBuilder: (context, index) => Container(
+                      height: 12,
+                    ),
                 itemBuilder: (context, index) {
                   return UserPosts(name: people[index]);
                 }),

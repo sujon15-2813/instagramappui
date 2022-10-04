@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedIndex,
+          selectedItemColor: Colors.green,
           onTap: _navigateButtonNavBar,
           type: BottomNavigationBarType.fixed,
           items: [
