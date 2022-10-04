@@ -64,7 +64,7 @@ class UserHome extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 itemCount: people.length,
                 separatorBuilder: (context, index) => Container(
-                      height: 12,
+                      height: 13,
                     ),
                 itemBuilder: (context, index) {
                   return UserPosts(name: people[index]);
